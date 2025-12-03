@@ -1,0 +1,31 @@
+/*
+Floyd's Triangle
+_________________
+Write a program in C to print Floyd's Triangle.
+1
+01
+101
+0101
+10101
+*/
+#include <stdio.h>
+int main()
+{
+    int n;
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if ((i % 2 == 0 && j % 2 == 0) || (i % 2 != 0 && j % 2 != 0))
+            {
+                printf("%d", 1);
+            }
+            else{
+                printf("%d", 0);
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
